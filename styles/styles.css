@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 115px;
+  text-align: center;
+  color: blue;
+  margin-top: 16px;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+}
+main .left-panel {
+  flex: 0.7;
+  height: 100%;
+  background-color: lightblue;
+}
+main .right-panel {
+  flex: 1;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: red;
+}
+main .right-panel form {
+  flex: 1;
+}
+main .right-panel form fieldset {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}/*# sourceMappingURL=styles.css.map */
