@@ -4,37 +4,33 @@
   box-sizing: border-box;
 }
 
-h1 {
-  font-size: 115px;
-  text-align: center;
-  color: blue;
-  margin-top: 16px;
-}
-
-main {
+body {
   height: 100vh;
+  width: 100vw;
   display: flex;
 }
-main .left-panel {
-  flex: 0.7;
+body .left-panel {
+  width: 40%;
   height: 100%;
-  background-color: lightblue;
 }
-main .right-panel {
-  flex: 1;
-  padding: 36px;
+body .left-panel .logo-div {
+  height: 40%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: red;
+  align-items: flex-end;
 }
-main .right-panel form {
-  flex: 1;
+body .left-panel .logo-div .logo {
+  background-color: grey;
+  height: 50%;
+  width: 100%;
 }
-main .right-panel form fieldset {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+body .right-panel {
+  height: 100%;
+  width: 60%;
+}
+body .right-panel .text-div {
+  height: 40%;
+  width: 100%;
+}
+body .right-panel .form-div {
+  height: 40%;
 }/*# sourceMappingURL=styles.css.map */

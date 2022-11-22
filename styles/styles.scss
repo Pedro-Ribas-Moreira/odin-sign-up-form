@@ -4,41 +4,34 @@
   box-sizing: border-box;
 }
 
-$var: blue;
-$texSize: 115px;
-h1 {
-  font-size: $texSize;
-  text-align: center;
-  color: $var;
-  margin-top: 16px;
-}
-
-main {
+body {
   height: 100vh;
+  width: 100vw;
   display: flex;
   .left-panel {
-    flex: 0.7;
+    width: calc(100% - 60%);
     height: 100%;
-    background-color: lightblue;
+    .logo-div {
+      height: calc(100% - 60%);
+      display: flex;
+      align-items: flex-end;
+      .logo {
+        background-color: grey;
+        height: 50%;
+        width: 100%;
+      }
+    }
   }
   .right-panel {
-    flex: 1;
-    padding: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: red;
-    .text-panel {
+    height: 100%;
+    width: calc(100% - 40%);
+
+    .text-div {
+      height: calc(100% - 60%);
+      width: 100%;
     }
-    form {
-      flex: 1;
-      fieldset {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-      }
+    .form-div {
+      height: calc(100% - 60%);
     }
   }
 }
