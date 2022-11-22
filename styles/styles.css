@@ -12,6 +12,8 @@ body {
 body .left-panel {
   width: 40%;
   height: 100%;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
 }
 body .left-panel .logo-div {
   height: 40%;
@@ -19,9 +21,19 @@ body .left-panel .logo-div {
   align-items: flex-end;
 }
 body .left-panel .logo-div .logo {
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.6);
   height: 50%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .left-panel .logo-div .logo img {
+  height: 86%;
+}
+body .left-panel .logo-div .logo h2 {
+  font-size: 64px;
+  color: white;
 }
 body .right-panel {
   height: 100%;
@@ -33,4 +45,16 @@ body .right-panel .text-div {
 }
 body .right-panel .form-div {
   height: 40%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+body .right-panel .form-div form {
+  height: 100%;
+}
+body .right-panel .form-div form fieldset {
+  height: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }/*# sourceMappingURL=styles.css.map */
