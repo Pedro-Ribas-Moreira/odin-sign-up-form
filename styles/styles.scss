@@ -61,7 +61,7 @@ body {
       padding: 1em;
       border: none;
       backdrop-filter: blur(5px);
-      box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.4);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       color: #fff;
       transition: all 0.2s ease-in-out;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -202,4 +202,31 @@ a {
   font-family: sans-serif;
   font-weight: bold;
   margin-top: 2rem;
+}
+
+/* CSS */
+.btn__submit {
+  align-items: center;
+  background: #191c29;
+  min-width: 200px;
+  padding: 1em;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: #ffffff;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+
+  user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn__submit:active,
+.btn__submit:hover {
+  outline: 0;
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
 }
