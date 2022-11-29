@@ -33,6 +33,45 @@ body {
   font-size: 1.5em;
   color: rgba(88, 199, 250, 0);
 }
+.card:hover {
+  color: rgb(88, 199, 250);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  -webkit-animation: none;
+          animation: none;
+}
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(var(--rotate), #fc466b, #b63ffb 43%, #3f5efb);
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  -webkit-animation: spin 2.5s linear infinite;
+          animation: spin 2.5s linear infinite;
+}
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(var(--rotate), #fc466b, #b63ffb 43%, #3f5efb);
+  opacity: 1;
+  transition: opacity 0.5s;
+  -webkit-animation: spin 2.5s linear infinite;
+          animation: spin 2.5s linear infinite;
+}
 .card .logo {
   display: flex;
   align-items: center;
@@ -73,6 +112,34 @@ body {
 .card form .error {
   color: rgb(194, 0, 0);
 }
+.card form .btn__submit {
+  align-items: center;
+  background: #191c29;
+  min-width: 200px;
+  padding: 1em;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: #ffffff;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.card form .btn__submit:active {
+  transform: translate(0px, 4px);
+}
+.card form .btn__submit:hover {
+  outline: 0;
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+}
 .card p {
   text-align: center;
   color: rgb(185, 184, 184);
@@ -83,50 +150,6 @@ body {
   text-decoration: none;
   color: inherit;
   font-size: inherit;
-}
-
-.card:hover {
-  color: rgb(88, 199, 250);
-  transition: color 1s;
-}
-
-.card:hover:before,
-.card:hover:after {
-  -webkit-animation: none;
-          animation: none;
-}
-
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(var(--rotate), #fc466b, #b63ffb 43%, #3f5efb);
-  position: absolute;
-  z-index: -1;
-  top: -1%;
-  left: -2%;
-  -webkit-animation: spin 2.5s linear infinite;
-          animation: spin 2.5s linear infinite;
-}
-
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(var(--rotate), #fc466b, #b63ffb 43%, #3f5efb);
-  opacity: 1;
-  transition: opacity 0.5s;
-  -webkit-animation: spin 2.5s linear infinite;
-          animation: spin 2.5s linear infinite;
 }
 
 @-webkit-keyframes spin {
@@ -154,32 +177,10 @@ a {
   margin-top: 2rem;
 }
 
-/* CSS */
-.btn__submit {
-  align-items: center;
-  background: #191c29;
-  min-width: 200px;
-  padding: 1em;
-  border: 1px solid #fff;
-  box-sizing: border-box;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  color: #ffffff;
-  font-size: 1rem;
+footer {
   display: flex;
   justify-content: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  transition: all 0.1s ease-in-out;
-  cursor: pointer;
+  padding-bottom: 16px;
 }
-.btn__submit:active {
-  transform: translate(0px, 4px);
-}
-.btn__submit:hover {
-  outline: 0;
-  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
-}/*# sourceMappingURL=styles.css.map */
+
+/* CSS *//*# sourceMappingURL=styles.css.map */
