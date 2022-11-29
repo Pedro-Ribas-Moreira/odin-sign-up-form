@@ -13,15 +13,26 @@
         <img src="./assets/odin-lined.png" alt="" />
       </div>
       <p>Welcome to The Odin Project!</p>
-      <form action="">
-        <input type="text" placeholder="First Name" /><br />
-        <input type="text" placeholder="Last Name" /><br />
-        <input type="tel" placeholder="Phone Number" /><br />
-        <input type="email" placeholder="Email" /><br />
-        <input type="password" placeholder="Password" /><br />
-        <input type="password" placeholder="Confirm Password" /><br />
-
-        <button class="btn__submit" type="submit">Create Account</button>
+      <form name="myForm" action="">
+        <input
+          onsubmit="return validateForm()"
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+        /><br />
+        <input type="text" name="lastName" placeholder="Last Name" /><br />
+        <input type="tel" name="phoneNumber" placeholder="Phone Number" /><br />
+        <input type="email" name="email" placeholder="Email" /><br />
+        <input type="password" name="password" placeholder="Password" /><br />
+        <input
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+        /><br />
+        <p><span class="error"></span></p>
+        <button class="btn__submit" type="button" onclick="formValidate()">
+          Create Account
+        </button>
       </form>
       <p>
         Already have an account?
