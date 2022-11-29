@@ -42,7 +42,7 @@
     <!-- <a href="https://github.com/Pedro-Ribas-Moreira/odin-sign-up-form"><strong>Explore the docs »</strong></a> -->
     <!-- <br /> -->
     <br />
-    <a href="https://pedro-ribas-moreira.github.io/odin-calculator/">View Demo</a>
+    <a href="https://pedro-ribas-moreira.github.io/odin-sign-up-form/">View Demo</a>
     ·
     <a href="https://github.com/Pedro-Ribas-Moreira/odin-sign-up-form/issues">Report Bug</a>
     ·
@@ -79,7 +79,7 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-<p>This project consists of an assessment for the Odin Project, to understand the power and to practice the use of preprocessor like SASS.
+<p>This project consists of an assessment for the Odin Project. The goal is to practice more advanced css, using the the power preprocessor like SASS.
 <br>
 In this project, Javascript was used to create the form validation, all the styling and animation was created with CSS.
 
